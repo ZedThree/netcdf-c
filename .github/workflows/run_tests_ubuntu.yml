@@ -122,12 +122,12 @@ jobs:
         run: |
           echo "------------- h5pubconf"
           cat /home/runner/environments/1.14.0/include/H5pubconf.h
-          echo "------------- try_compile files
-          ls build/CMakeFiles/CMakeTmp/*
-          batcat build/CMakeFiles/CMakeTmp/*
           echo "------------- CMakeError"
           ls build/CMakeFiles/
           batcat build/CMakeFiles/*{log,yaml}
+          echo "------------- try_compile files
+          tree build/CMakeFiles
+          batcat build/CMakeFiles/CMakeTmp/*
 
       - name: Print Summary
         shell: bash -l {0}
