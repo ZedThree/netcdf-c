@@ -40,6 +40,8 @@ function(check_hdf5_feature VAR FEATURE)
   endif()
 
   include(CheckCSourceCompiles)
+  set(CMAKE_REQUIRED_INCLUDES ${HDF5_INCLUDE_DIR})
+
   message(STATUS "Checking for ${FEATURE}")
   check_c_source_compiles("
 #include <${_H5_FEATURE_HEADER}>
