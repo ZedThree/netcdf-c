@@ -17,7 +17,7 @@ function(check_hdf5_feature_header)
   set(CMAKE_REQUIRED_INCLUDES ${HDF5_INCLUDE_DIR})
 
   message(STATUS "Checking for HDF5 config header")
-  foreach(_h5_header "H5public.h" "H5pubconf.h" "H5pubconf-64.h" "H5pubconf-32.h")
+  foreach(_h5_header "H5pubconf.h" "H5pubconf-64.h" "H5pubconf-32.h")
     check_include_file(${_h5_header} _can_include_h5_header)
 
     if (_can_include_h5_header)
